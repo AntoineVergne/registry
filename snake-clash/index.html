@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Clash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="menu-screen">
+            <h1 class="title">SNAKE<span class="clash">CLASH</span></h1>
+            <div class="menu-options">
+                <button id="btn-1player" class="menu-btn">1 Player</button>
+                <button id="btn-2player" class="menu-btn">2 Players</button>
+                <button id="btn-ai" class="menu-btn">vs AI</button>
+            </div>
+            <div class="controls-info">
+                <div class="player-controls">
+                    <h3 style="color: #4ade80;">Player 1</h3>
+                    <p>WASD to move</p>
+                </div>
+                <div class="player-controls">
+                    <h3 style="color: #60a5fa;">Player 2</h3>
+                    <p>Arrow keys to move</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-screen" class="hidden">
+            <div id="scoreboard">
+                <div id="p1-score" class="score">
+                    <span class="score-label" style="color: #4ade80;">P1</span>
+                    <span class="score-value" id="p1-score-value">0</span>
+                </div>
+                <div id="round-info"></div>
+                <div id="p2-score" class="score">
+                    <span class="score-label" style="color: #60a5fa;">P2</span>
+                    <span class="score-value" id="p2-score-value">0</span>
+                </div>
+            </div>
+            <canvas id="game-canvas"></canvas>
+            <div id="game-message" class="hidden"></div>
+        </div>
+
+        <div id="gameover-screen" class="hidden">
+            <h1 class="title">GAME OVER</h1>
+            <div id="final-result"></div>
+            <div id="final-scores"></div>
+            <button id="btn-rematch" class="menu-btn">Rematch</button>
+            <button id="btn-menu" class="menu-btn secondary">Main Menu</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
